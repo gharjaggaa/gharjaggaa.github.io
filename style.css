@@ -1,0 +1,275 @@
+/* PAGE BACKGROUND */
+body {
+    background: #FAFBFC;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* H2 STYLING */
+h2 {
+    margin-left: 40px; /* slight right shift */
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+/* NAVBAR */
+nav {
+    background: #0C9700;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Icon */
+.nav-left-icon img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Center Title */
+.nav-title {
+    text-align: center;
+    flex: 1;
+}
+
+.nav-title h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-title p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Right Menu */
+.nav-right-menu {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+}
+
+.nav-right-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero {
+    background: url('bg.webp') no-repeat center/cover;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.search-area {
+    margin: 10px 0;
+}
+
+.find-btn {
+    background: #0C9700;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* PROPERTY GRID */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    gap: 20px;
+}
+
+.property-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.see-all {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* FAQ GRID */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.faq {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.faq summary {
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "\f107"; /* FontAwesome chevron */
+    font-family: "Font Awesome 6 Free";
+    float: right;
+    font-weight: 900;
+}
+
+.faq[open] summary::after {
+    content: "\f106"; /* FontAwesome up chevron */
+}
+
+/* LISTING FORM */
+.listing-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    gap: 10px;
+}
+
+.listing-form input,
+.listing-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.listing-form button {
+    background: #0C9700;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    background: #0C9700;
+    color: white;
+    padding: 40px 20px 10px;
+    margin-top: 40px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.footer-block h3,
+.footer-left h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-block ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* RESPONSIVE ------------------------------- */
+@media (max-width: 992px) {
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .listing-form {
+        width: 70%;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-right-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .listing-form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-title h1 {
+        font-size: 18px;
+    }
+
+    .nav-right-menu li a {
+        font-size: 14px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    h2 {
+        margin-left: 15px;
+    }
+}

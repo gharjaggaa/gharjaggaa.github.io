@@ -24,8 +24,8 @@ nav {
 
 /* Left Icon */
 .nav-left-icon img {
-    width: 95px;
-    height: 55px;
+    width: 145px;
+    height: 95px;
 }
 
 /* Center Title */
@@ -273,4 +273,5 @@ footer {
         margin-left: 15px;
     }
 }
+
 
